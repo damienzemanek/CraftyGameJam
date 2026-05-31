@@ -7,6 +7,7 @@ public class GameSceneManager : Singleton<GameSceneManager>
     public enum Scenes
     {
         Menu,
+        Intro,
         Level1,
         Win
     }

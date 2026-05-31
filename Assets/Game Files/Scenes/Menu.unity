@@ -529,6 +529,8 @@ MonoBehaviour:
     level: 1
   - scene: 2
     level: 2
+  - scene: 3
+    level: 3
 --- !u!4 &856340305
 Transform:
   m_ObjectHideFlags: 0

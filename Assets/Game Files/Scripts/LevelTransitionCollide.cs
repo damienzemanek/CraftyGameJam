@@ -1,11 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelTransitionCollide : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D other)
+    public UnityEvent onTriggerEnter;
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.gameObject.CompareTag("Player")) return;
-        UI.Instance.deathScreen.SetActive(true);
-        Application.LoadLevel(Application.loadedLevel);
+        onTriggerEnter?.Invoke();
     }
 }
