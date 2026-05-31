@@ -5,19 +5,24 @@ using UnityEngine;
 
 public class SwitchWall : MonoBehaviour
 {
-    public int current;
+    public int startIndex;
+    [ReadOnly] public int current;
     [ReadOnly] public List<GameObject> states;
     Player player => Player.Instance;
     
 
     void Start()
     {
+        current = startIndex;
         states = new List<GameObject>();
         foreach (Transform child in transform)
             states.Add(child.gameObject);
         
         DisableAllStates();
-        states[current].SetActive(true);
+        if(current < states.Count)
+            states[current].SetActive(true);
+        else 
+            current = 0;
     }
 
     void OnEnable() => player.onWallSwitch += Switch;
