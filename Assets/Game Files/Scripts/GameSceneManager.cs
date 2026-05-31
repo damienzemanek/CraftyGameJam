@@ -9,6 +9,7 @@ public class GameSceneManager : Singleton<GameSceneManager>
         Menu,
         Intro,
         Level1,
+        Level2,
         Win
     }
     

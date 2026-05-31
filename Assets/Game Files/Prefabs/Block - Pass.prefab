@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6258150075083861474}
   - component: {fileID: 104285744828779768}
-  m_Layer: 0
-  m_Name: Wall (1)
+  m_Layer: 6
+  m_Name: PassCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -89,8 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7133406090360715824}
   - component: {fileID: 4138572051350989239}
-  m_Layer: 0
-  m_Name: Wall (2)
+  m_Layer: 6
+  m_Name: CollisionCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5765079972498824905}
   - component: {fileID: 5594847636093990744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Block - Pass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c978c08aaddd4b7438e2f8bb82ce666c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startIndex: 0
   current: 0
   states:
   - {fileID: 2081154508405432124}
@@ -219,6 +220,10 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 941ac9a61b82a214996d681f1e16e38f, type: 3}
       propertyPath: m_Name
       value: PassThroughBox
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 941ac9a61b82a214996d681f1e16e38f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 941ac9a61b82a214996d681f1e16e38f, type: 3}
       propertyPath: m_LocalScale.x
@@ -294,6 +299,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollisionBox
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 896ae37a9e6874844a5df8cfa00843ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 896ae37a9e6874844a5df8cfa00843ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2441899769905516534, guid: b279dabacbd31ae4bac34301b3460873, type: 3}
     - target: {fileID: 7878350319992209165, guid: 896ae37a9e6874844a5df8cfa00843ab, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.9757552
